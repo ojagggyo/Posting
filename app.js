@@ -16,7 +16,7 @@ async function main(username, key, category){
         console.log(`skip ${now}`);
         return
     }
-    if(today.getMinutes < 30){
+    if(now.getMinutes < 30){
         console.log(`skip ${now}`);
         return
     }
