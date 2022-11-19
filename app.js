@@ -10,6 +10,17 @@ const app_downloadAndSave = require('./app_downloadAndSave.js')
 
 async function main(username, key, category){
 
+    //23時30分以前なら、リターン
+    var now = new Date();
+    if(today.getHours < 23){
+        console.log(`skip ${now}`);
+        return
+    }
+    if(today.getMinutes < 30){
+        console.log(`skip ${now}`);
+        return
+    }
+
     const file_path = path.join(process.cwd(), "post.png");
 
     //記事の最初の画像のurlを取得
@@ -61,5 +72,5 @@ setInterval(
     function(){
         main(acount_name, dsteem.PrivateKey.fromString(posting_key), category)
     }, 
-    24 * 60 * 60 * 1000
+    10 * 60 * 1000//10分ごと
 );
