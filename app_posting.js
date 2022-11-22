@@ -1,5 +1,6 @@
 const dsteem = require('dsteem');
-const client = new dsteem.Client('https://api.steemit.com');
+// const client = new dsteem.Client('https://api.steemit.com');
+const client = new dsteem.Client('https://api.steememory.com');
 
 module.exports.createPost = async (username, key, category, title, body, imageurl) => {
 

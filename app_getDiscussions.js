@@ -1,6 +1,7 @@
 const dsteem = require('dsteem');
 
-const client = new dsteem.Client('https://api.steemit.com');
+//const client = new dsteem.Client('https://api.steemit.com');
+const client = new dsteem.Client('https://api.steememory.com');
 
 function getDateString(date){
     return `${date.getMonth()+1}/${date.getDay()} ${date.getHours()}:${date.getMinutes()}`;
