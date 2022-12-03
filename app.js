@@ -12,7 +12,7 @@ async function main(username, key, category){
 
     //23時30分以前なら、リターン
     var now = new Date();
-    if(now.getHours() < 23){
+    if(now.getHours() != 22){
         console.log(`skip ${now}`);
         return
     }
