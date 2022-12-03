@@ -39,19 +39,20 @@ module.exports.downloadAndSave = async (urls, out_path) => {
             //console.log("2");
             imgBufferList.push(
                 await sharp(`./images/${index + 1}.png`)
-                .resize(
-                    {
-                        width: image_width, 
-                        height: image_height, 
-                    })
-                .toBuffer()
+                    .resize({width: image_width, height: image_height,})
+                    .toBuffer()
             )
             //console.log("3");
             process.stdout.write(`${index + 1}.png `);
     
         } catch (error) {
-            console.log("catch");
+            console.log("★★★catch");
             console.log(error); 
+            imgBufferList.push(
+                await sharp(`./images/error.png`)
+                    .resize({width: image_width, height: image_height,})
+                    .toBuffer()
+            )
         }finally{
         }
     }
