@@ -72,5 +72,5 @@ setInterval(
     function(){
         main(acount_name, dsteem.PrivateKey.fromString(posting_key), category)
     }, 
-    30 * 60 * 1000//10分ごと
+    30 * 60 * 1000//30分ごと
 );
