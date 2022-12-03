@@ -46,6 +46,7 @@ module.exports.downloadAndSave = async (urls, out_path) => {
             process.stdout.write(`${index + 1}.png `);
     
         } catch (error) {
+            //画像の形式が異常な場合など。
             console.log("★★★catch");
             console.log(error); 
             imgBufferList.push(
