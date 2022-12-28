@@ -97,7 +97,7 @@ module.exports.getPosts = async (tag) => {
             s = post.body.match(/https:\/\/.*(jpg|jpeg|gif|png)/);
             if(s){
                 //urls.push(s[0]);
-                urls.push(encodeURI(s[0]));
+                urls.push(encodeURI(s[0]));//URLエンコードする
             }
             else{
                 urls.push(`https://steemitimages.com/u/${post.author}/avatar/`);                     
